@@ -11,6 +11,11 @@
 		D91D368E2748111B0029E49A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D368D2748111B0029E49A /* ViewController.swift */; };
 		D91D36932748111C0029E49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91D36922748111C0029E49A /* Assets.xcassets */; };
 		D91D36962748111C0029E49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91D36942748111C0029E49A /* LaunchScreen.storyboard */; };
+		D9591EC727484E9900503378 /* BaseTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591EC627484E9900503378 /* BaseTableView.swift */; };
+		D9591EC927484ECE00503378 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591EC827484ECE00503378 /* BaseTableViewCell.swift */; };
+		D9591ECB27484F9E00503378 /* BaseTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591ECA27484F9E00503378 /* BaseTableViewHeader.swift */; };
+		D9591ED02748517200503378 /* BaseTableViewHasHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591ECF2748517200503378 /* BaseTableViewHasHeader.swift */; };
+		D9591ED32748519600503378 /* BaseLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9591ED22748519600503378 /* BaseLayout.swift */; };
 		D9D2D9252748150800ED2094 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2D9242748150800ED2094 /* BaseNavigationController.swift */; };
 		D9D2D9272748152B00ED2094 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2D9262748152B00ED2094 /* BaseController.swift */; };
 		D9D2D92A2748157400ED2094 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2D9292748157400ED2094 /* Extensions.swift */; };
@@ -32,6 +37,11 @@
 		D91D36922748111C0029E49A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D91D36952748111C0029E49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D91D36972748111C0029E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9591EC627484E9900503378 /* BaseTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableView.swift; sourceTree = "<group>"; };
+		D9591EC827484ECE00503378 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		D9591ECA27484F9E00503378 /* BaseTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewHeader.swift; sourceTree = "<group>"; };
+		D9591ECF2748517200503378 /* BaseTableViewHasHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewHasHeader.swift; sourceTree = "<group>"; };
+		D9591ED22748519600503378 /* BaseLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayout.swift; sourceTree = "<group>"; };
 		D9D2D9242748150800ED2094 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		D9D2D9262748152B00ED2094 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D9D2D9292748157400ED2094 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -88,12 +98,41 @@
 			path = MoviesApp;
 			sourceTree = "<group>";
 		};
+		D9591ECE2748515E00503378 /* tableView */ = {
+			isa = PBXGroup;
+			children = (
+				D9591EC627484E9900503378 /* BaseTableView.swift */,
+				D9591EC827484ECE00503378 /* BaseTableViewCell.swift */,
+				D9591ECA27484F9E00503378 /* BaseTableViewHeader.swift */,
+				D9591ECF2748517200503378 /* BaseTableViewHasHeader.swift */,
+			);
+			path = tableView;
+			sourceTree = "<group>";
+		};
+		D9591ED12748518E00503378 /* layout */ = {
+			isa = PBXGroup;
+			children = (
+				D9D2D92E27481B9F00ED2094 /* BaseControllerLayout.swift */,
+				D9591ED22748519600503378 /* BaseLayout.swift */,
+			);
+			path = layout;
+			sourceTree = "<group>";
+		};
+		D9591ED42748532B00503378 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D9D2D9262748152B00ED2094 /* BaseController.swift */,
+				D9D2D9242748150800ED2094 /* BaseNavigationController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
 		D9D2D922274814D400ED2094 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				D9D2D9242748150800ED2094 /* BaseNavigationController.swift */,
-				D9D2D9262748152B00ED2094 /* BaseController.swift */,
-				D9D2D92E27481B9F00ED2094 /* BaseControllerLayout.swift */,
+				D9591ED42748532B00503378 /* controller */,
+				D9591ED12748518E00503378 /* layout */,
+				D9591ECE2748515E00503378 /* tableView */,
 			);
 			path = base;
 			sourceTree = "<group>";
@@ -215,18 +254,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9591EC927484ECE00503378 /* BaseTableViewCell.swift in Sources */,
 				D9D2D93A27481D9100ED2094 /* SplashLayout.swift in Sources */,
 				D9D2D92A2748157400ED2094 /* Extensions.swift in Sources */,
 				D91D368E2748111B0029E49A /* ViewController.swift in Sources */,
 				D9D2D93127481C6A00ED2094 /* MainNavigationController.swift in Sources */,
+				D9591ECB27484F9E00503378 /* BaseTableViewHeader.swift in Sources */,
+				D9591EC727484E9900503378 /* BaseTableView.swift in Sources */,
 				D91D368A2748111B0029E49A /* AppDelegate.swift in Sources */,
 				D9D2D93827481D7F00ED2094 /* SplashController.swift in Sources */,
 				D9D2D940274822B200ED2094 /* DetailLayout.swift in Sources */,
 				D9D2D92C274815AE00ED2094 /* Device.swift in Sources */,
+				D9591ED32748519600503378 /* BaseLayout.swift in Sources */,
 				D9D2D93E2748227B00ED2094 /* HomeLayout.swift in Sources */,
 				D9D2D9272748152B00ED2094 /* BaseController.swift in Sources */,
 				D9D2D93C2748225400ED2094 /* HomeController.swift in Sources */,
 				D9D2D92F27481B9F00ED2094 /* BaseControllerLayout.swift in Sources */,
+				D9591ED02748517200503378 /* BaseTableViewHasHeader.swift in Sources */,
 				D9D2D93627481D0B00ED2094 /* DetailController.swift in Sources */,
 				D9D2D9252748150800ED2094 /* BaseNavigationController.swift in Sources */,
 			);

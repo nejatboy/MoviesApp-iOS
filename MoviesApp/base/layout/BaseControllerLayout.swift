@@ -8,7 +8,7 @@
 import UIKit
 
 
-class BaseControllerLayout<NC: BaseNavigationController, C: BaseController<NC>>: UIView {
+class BaseControllerLayout<NC: BaseNavigationController, C: BaseController<NC>>: BaseLayout {
     
     init() {
         super.init(frame: Device.dimension)
