@@ -10,4 +10,17 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
     
+    var firebaseService = FirebaseService()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        firebaseService.messageListener = show(message:type:)
+    }
+    
+    
+    func show(message: String, type: MessageType) {
+        print(message)
+    }
 }

@@ -18,5 +18,10 @@ class MainNavigationController: BaseNavigationController {
         super.viewDidLoad()
         
         viewControllers = [splashController]
+        
+        
+        firebaseService.fetchApplicationInfo { info in
+            
+        }
     }
 }

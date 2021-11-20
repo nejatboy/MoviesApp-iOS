@@ -15,4 +15,13 @@ class BaseController<NC: BaseNavigationController>: UIViewController {
         return navigationController as! NC
     }
 
+    
+    func show(message: String, type: MessageType) {
+        navigationController().show(message: message, type: type)
+    }
+    
+    
+    var firebaseService: FirebaseService {
+        return navigationController().firebaseService
+    }
 }
