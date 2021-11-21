@@ -12,16 +12,18 @@ import Foundation
 class MainNavigationController: BaseNavigationController {
     
     private let splashController = SplashController()
+    private lazy var homeController = HomeController()
+    private lazy var detailController = DetailController()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewControllers = [splashController]
-        
-        
-        firebaseService.fetchApplicationInfo { info in
-            
-        }
+    }
+    
+    
+    func goToHomeController() {
+        pushViewController(homeController, animated: true)
     }
 }

@@ -13,6 +13,8 @@ class BaseControllerLayout<NC: BaseNavigationController, C: BaseController<NC>>:
     init() {
         super.init(frame: Device.dimension)
         
+        backgroundColor = .white
+        
         setupSubviews()
         
         setConstraints()
@@ -21,6 +23,11 @@ class BaseControllerLayout<NC: BaseNavigationController, C: BaseController<NC>>:
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        endEditing(true)
     }
     
     

@@ -5,13 +5,24 @@
 //  Created by Nejat BOY on 19.11.2021.
 //
 
-import Foundation
+import UIKit
 
 
 class SplashLayout: BaseControllerLayout<MainNavigationController, SplashController> {
     
+    let labelIntro = LabelIntroSplash()
+    
     
     override func setupSubviews() {
-        backgroundColor = .systemGreen
+        addSubview(labelIntro)
+    }
+    
+    
+    override func setConstraints() {
+        NSLayoutConstraint.activate([
+            labelIntro.centerXAnchor.constraint(equalTo: centerXAnchor),
+            labelIntro.centerYAnchor.constraint(equalTo: centerYAnchor),
+            labelIntro.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8)
+        ])
     }
 }

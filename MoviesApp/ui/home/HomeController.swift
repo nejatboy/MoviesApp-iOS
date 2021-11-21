@@ -17,4 +17,9 @@ class HomeController: BaseController<MainNavigationController> {
     override func loadView() {
         view = layout
     }
+    
+    
+    func searched(text: String) {
+        print("asd")
+    }
 }

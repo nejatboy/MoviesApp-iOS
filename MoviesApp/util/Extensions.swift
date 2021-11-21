@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 
@@ -19,5 +20,18 @@ extension InlineConfigurable {
     @discardableResult func also(_ block: (Self) -> Void) -> Self  {
         block(self)
         return self
+    }
+}
+
+
+
+// MARK: - UIFONT
+extension UIFont {
+    static func getDynamic(of size: CGFloat, isBold: Bool) -> Self {
+        let width = Device.width
+        
+        let multipler = width / 375
+        let font: UIFont = isBold ? boldSystemFont(ofSize: size * multipler) : systemFont(ofSize: size * multipler)
+        return font as! Self
     }
 }

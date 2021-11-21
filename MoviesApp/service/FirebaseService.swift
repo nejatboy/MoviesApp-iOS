@@ -18,20 +18,18 @@ struct FirebaseService {
     func fetchApplicationInfo(completion: @escaping (Info) -> Void) {
         let reference = db.reference().child("Application").child("iOS")
             
-        reference.getData { error, snapshot in
+        reference.getData { [self] error, snapshot in
             if let error = error  {
-                print("FirebaseService# " + error.localizedDescription)
+                messageListener?(error.localizedDescription, .error)
                 return
             }
             
             guard let info = Info(value: snapshot.value) else {
-                // ERROR
+                messageListener?(Text.Error.common, .error)
                 return
             }
             
             completion(info)
         }
-        
-        
     }
 }

@@ -16,6 +16,7 @@ class BaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        isNavigationBarHidden = true
         firebaseService.messageListener = show(message:type:)
     }
     
