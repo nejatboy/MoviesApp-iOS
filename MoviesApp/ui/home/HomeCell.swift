@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class HomeCell: BaseTableViewCell {
@@ -53,6 +54,6 @@ class HomeCell: BaseTableViewCell {
     func bind(movie: Movie) {
         labelTitle.text = movie.title
         labelYear.text = movie.year
-        
+        imageViewPoster.kf.setImage(with: URL(string: movie.poster))
     }
 }

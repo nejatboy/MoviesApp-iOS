@@ -16,7 +16,7 @@ class SearchBar: BaseSearchBar {
     
     
     override func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        (superview?.superview?.superview as? HomeLayout)?.controller().searched(text: text!)
+        (superview?.superview?.superview as? HomeLayout)?.controller().searched(text: text!.replacingOccurrences(of: " ", with: ""))
         text = nil
     }
 }

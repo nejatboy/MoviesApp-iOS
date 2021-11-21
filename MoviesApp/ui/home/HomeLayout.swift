@@ -10,7 +10,7 @@ import UIKit
 
 class HomeLayout: BaseControllerLayout<MainNavigationController, HomeController> {
     
-    private let tableView = HomeTableView()
+    let tableView = HomeTableView()
     
     
     override func setupSubviews() {

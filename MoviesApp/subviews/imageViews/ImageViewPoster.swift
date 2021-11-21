@@ -12,7 +12,6 @@ import UIKit
 class ImageViewPoster: BaseImageView {
     
     override func configure() {
-        backgroundColor = .systemGreen
         layer.cornerRadius = Device.width * 0.02
         layer.masksToBounds = true
     }
