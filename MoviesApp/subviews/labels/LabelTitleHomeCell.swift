@@ -15,6 +15,5 @@ class LabelTitleHomeCell: BaseLabel {
         textColor = .black
         set(fontSize: 17, isBold: true)
         textAlignment = .center
-        numberOfLines = 2
     }
 }

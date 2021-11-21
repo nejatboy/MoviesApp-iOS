@@ -1,11 +1,12 @@
 //
-//  Application.swift
+//  Info.swift
 //  MoviesApp
 //
-//  Created by Nejat BOY on 20.11.2021.
+//  Created by Nejat BOY on 21.11.2021.
 //
 
 import Foundation
+
 
 
 struct Info {

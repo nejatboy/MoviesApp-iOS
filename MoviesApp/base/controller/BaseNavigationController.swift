@@ -11,13 +11,16 @@ import UIKit
 class BaseNavigationController: UINavigationController {
     
     var firebaseService = FirebaseService()
+    var apiService = ApiService()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         isNavigationBarHidden = true
+        
         firebaseService.messageListener = show(message:type:)
+        apiService.messageListener = show(message:type:)
     }
     
     

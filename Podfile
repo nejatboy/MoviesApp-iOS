@@ -8,8 +8,10 @@ target 'MoviesApp' do
 	pod 'Firebase/Analytics'
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
-	pod 'SDWebImage'
+	pod 'SDWebImage', '~> 5.0'
 
 end
+
+
 
 

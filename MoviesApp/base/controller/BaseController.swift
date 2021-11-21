@@ -24,4 +24,9 @@ class BaseController<NC: BaseNavigationController>: UIViewController {
     var firebaseService: FirebaseService {
         return navigationController().firebaseService
     }
+    
+    
+    var apiService: ApiService {
+        return navigationController().apiService
+    }
 }

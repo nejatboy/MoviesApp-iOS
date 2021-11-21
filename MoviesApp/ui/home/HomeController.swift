@@ -19,6 +19,13 @@ class HomeController: BaseController<MainNavigationController> {
     }
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        apiService.fetchMovieDetail(id: "tt0120737")
+    }
+    
+    
     func searched(text: String) {
         print("asd")
     }

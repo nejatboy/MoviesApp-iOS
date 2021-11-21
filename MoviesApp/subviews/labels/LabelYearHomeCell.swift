@@ -9,11 +9,11 @@ import Foundation
 
 
 
-class LabelDescriptionHomeCell: BaseLabel {
+class LabelYearHomeCell: BaseLabel {
     
     override func configure() {
         textColor = .gray
-        set(fontSize: 15, isBold: false)
+        set(fontSize: 14, isBold: false)
         numberOfLines = 5
     }
 }
