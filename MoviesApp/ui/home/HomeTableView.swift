@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-// 9893101c
+
 
 class HomeTableView<C: HomeCell, H: HomeHeader>: BaseTableViewHasHeader<C, HomeLayout, H>, UITableViewDelegate, UITableViewDataSource {
     
@@ -44,6 +44,12 @@ class HomeTableView<C: HomeCell, H: HomeHeader>: BaseTableViewHasHeader<C, HomeL
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         return dequeueReusableHeaderFooterView(withIdentifier: H.id) as! H
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let movie = movies[indexPath.row]
+        parent().controller().onItemMovieClicked(movieID: movie.imdbID)
     }
     
     

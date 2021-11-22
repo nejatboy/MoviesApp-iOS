@@ -19,6 +19,8 @@ class BaseTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         configure()
+        
+        selectionStyle = .none
     }
     
     

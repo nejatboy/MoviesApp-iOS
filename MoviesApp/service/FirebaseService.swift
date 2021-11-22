@@ -32,4 +32,23 @@ struct FirebaseService {
             completion(info)
         }
     }
+    
+    
+    func fetchKeywords(completion: @escaping ([String]) -> Void) {
+        let reference = db.reference().child("Keywords")
+        
+        reference.getData { [self] error, snapshot in
+            if let error = error  {
+                messageListener?(error.localizedDescription, .error)
+                return
+            }
+            
+            guard let keywords = snapshot.value as? [String] else {
+                messageListener?(Text.Error.common, .error)
+                return
+            }
+            
+            completion(keywords)
+        }
+    }
 }

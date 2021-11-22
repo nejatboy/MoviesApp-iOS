@@ -17,8 +17,6 @@
 		D92C253627498ACA002C84A8 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C253527498ACA002C84A8 /* Text.swift */; };
 		D92C253927498C4E002C84A8 /* BaseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C253827498C4E002C84A8 /* BaseLabel.swift */; };
 		D92C253D27498CD8002C84A8 /* LabelIntroSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C253C27498CD8002C84A8 /* LabelIntroSplash.swift */; };
-		D92C254027498DA1002C84A8 /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C253F27498DA1002C84A8 /* BaseInteractor.swift */; };
-		D92C254227498DB0002C84A8 /* SplashInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C254127498DB0002C84A8 /* SplashInteractor.swift */; };
 		D92C254427499822002C84A8 /* BaseSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C254327499822002C84A8 /* BaseSearchBar.swift */; };
 		D92C25462749991F002C84A8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C25452749991F002C84A8 /* SearchBar.swift */; };
 		D92C254827499EB6002C84A8 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C254727499EB6002C84A8 /* HomeTableView.swift */; };
@@ -74,8 +72,6 @@
 		D92C253527498ACA002C84A8 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		D92C253827498C4E002C84A8 /* BaseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLabel.swift; sourceTree = "<group>"; };
 		D92C253C27498CD8002C84A8 /* LabelIntroSplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelIntroSplash.swift; sourceTree = "<group>"; };
-		D92C253F27498DA1002C84A8 /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
-		D92C254127498DB0002C84A8 /* SplashInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractor.swift; sourceTree = "<group>"; };
 		D92C254327499822002C84A8 /* BaseSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSearchBar.swift; sourceTree = "<group>"; };
 		D92C25452749991F002C84A8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D92C254727499EB6002C84A8 /* HomeTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
@@ -245,14 +241,6 @@
 			path = labels;
 			sourceTree = "<group>";
 		};
-		D92C253E27498D96002C84A8 /* interactor */ = {
-			isa = PBXGroup;
-			children = (
-				D92C253F27498DA1002C84A8 /* BaseInteractor.swift */,
-			);
-			path = interactor;
-			sourceTree = "<group>";
-		};
 		D92C255D274A6DA7002C84A8 /* imageViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,7 +282,6 @@
 		D9D2D922274814D400ED2094 /* base */ = {
 			isa = PBXGroup;
 			children = (
-				D92C253E27498D96002C84A8 /* interactor */,
 				D92C253727498C3F002C84A8 /* views */,
 				D9591ED42748532B00503378 /* controller */,
 				D9591ED12748518E00503378 /* layout */,
@@ -330,7 +317,6 @@
 			children = (
 				D9D2D93727481D7F00ED2094 /* SplashController.swift */,
 				D9D2D93927481D9100ED2094 /* SplashLayout.swift */,
-				D92C254127498DB0002C84A8 /* SplashInteractor.swift */,
 			);
 			path = splash;
 			sourceTree = "<group>";
@@ -462,7 +448,6 @@
 				D92C2565274A7224002C84A8 /* LabelYearHomeCell.swift in Sources */,
 				D92C254A27499EC7002C84A8 /* HomeCell.swift in Sources */,
 				D9591EC927484ECE00503378 /* BaseTableViewCell.swift in Sources */,
-				D92C254227498DB0002C84A8 /* SplashInteractor.swift in Sources */,
 				D92C254E2749A1EA002C84A8 /* BaseImageView.swift in Sources */,
 				D92C254C27499EDC002C84A8 /* HomeHeader.swift in Sources */,
 				D9D2D93A27481D9100ED2094 /* SplashLayout.swift in Sources */,
@@ -481,7 +466,6 @@
 				D9D2D92C274815AE00ED2094 /* Device.swift in Sources */,
 				D9591ED32748519600503378 /* BaseLayout.swift in Sources */,
 				D9D2D93E2748227B00ED2094 /* HomeLayout.swift in Sources */,
-				D92C254027498DA1002C84A8 /* BaseInteractor.swift in Sources */,
 				D9D2D9272748152B00ED2094 /* BaseController.swift in Sources */,
 				D92C254427499822002C84A8 /* BaseSearchBar.swift in Sources */,
 				D9D2D93C2748225400ED2094 /* HomeController.swift in Sources */,

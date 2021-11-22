@@ -16,4 +16,11 @@ class DetailController: BaseController<MainNavigationController> {
     override func loadView() {
         view = layout
     }
+    
+    
+    func fetchMovieDetail(id: String) {
+        apiService.fetchMovieDetail(id: id) { movieDetail in
+            print("asd")
+        }
+    }
 }

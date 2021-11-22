@@ -15,6 +15,8 @@ class MainNavigationController: BaseNavigationController {
     private lazy var homeController = HomeController()
     private lazy var detailController = DetailController()
     
+    var keywords = [String]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +27,11 @@ class MainNavigationController: BaseNavigationController {
     
     func goToHomeController() {
         pushViewController(homeController, animated: true)
+    }
+    
+    
+    func goToDetailController(movieID: String) {
+        pushViewController(detailController, animated: true)
+        detailController.fetchMovieDetail(id: movieID)
     }
 }

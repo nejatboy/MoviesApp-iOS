@@ -11,7 +11,6 @@ import Foundation
 class SplashController: BaseController<MainNavigationController> {
     
     private let layout = SplashLayout()
-    private let interactor = SplashInteractor()
     
     
     override func loadView() {
@@ -22,7 +21,7 @@ class SplashController: BaseController<MainNavigationController> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        interactor.requestFetchApplicationInfo(firebaseService: firebaseService, completion: infoFetched(_:))
+        firebaseService.fetchApplicationInfo(completion: infoFetched(_:))
     }
     
     
@@ -35,6 +34,13 @@ class SplashController: BaseController<MainNavigationController> {
             // New Version
             return
         }
+        
+        firebaseService.fetchKeywords(completion: keywordsFetched(keywords:))
+    }
+    
+    
+    private func keywordsFetched(keywords: [String]) {
+        navigationController().keywords = keywords
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.navigationController().goToHomeController()

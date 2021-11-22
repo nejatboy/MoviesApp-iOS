@@ -20,6 +20,15 @@ class HomeController: BaseController<MainNavigationController> {
     }
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        keyword = navigationController().keywords.randomElement()!
+        
+        request(page: 1)
+    }
+    
+    
     func request(page: Int) {
         apiService.search(keyword: keyword, page: page) {
             self.layout.tableView.addMovies($0)
@@ -33,5 +42,10 @@ class HomeController: BaseController<MainNavigationController> {
         
         keyword = text
         request(page: 1)
+    }
+    
+    
+    func onItemMovieClicked(movieID: String) {
+        navigationController().goToDetailController(movieID: movieID)
     }
 }
