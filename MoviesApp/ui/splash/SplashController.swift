@@ -41,9 +41,10 @@ class SplashController: BaseController<MainNavigationController> {
     
     private func keywordsFetched(keywords: [String]) {
         navigationController().keywords = keywords
+        navigationController().goToHomeController()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-            self.navigationController().goToHomeController()
-        }
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//            self.navigationController().goToHomeController()
+//        }
     }
 }

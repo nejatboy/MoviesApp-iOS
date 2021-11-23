@@ -5,7 +5,7 @@
 //  Created by Nejat BOY on 19.11.2021.
 //
 
-import Foundation
+import UIKit
 
 
 
@@ -17,11 +17,16 @@ class HomeController: BaseController<MainNavigationController> {
     
     override func loadView() {
         view = layout
+        
+        navigationController().isNavigationBarHidden = false
+        navigationItem.title = "Movies App"
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(buttonSearchClicked))
         
         keyword = navigationController().keywords.randomElement()!
         
@@ -31,13 +36,13 @@ class HomeController: BaseController<MainNavigationController> {
     
     func request(page: Int) {
         apiService.search(keyword: keyword, page: page) {
-            self.layout.tableView.addMovies($0)
+            self.layout.collectionView.addMovies($0)
         }
     }
     
     
     func searched(text: String) {
-        layout.tableView.clear()
+        layout.collectionView.clear()
         view.endEditing(true)
         
         keyword = text
@@ -47,5 +52,11 @@ class HomeController: BaseController<MainNavigationController> {
     
     func onItemMovieClicked(movieID: String) {
         navigationController().goToDetailController(movieID: movieID)
+    }
+    
+    
+    @objc private func buttonSearchClicked() {
+        navigationItem.rightBarButtonItem = nil
+        layout.searchBar.show()
     }
 }

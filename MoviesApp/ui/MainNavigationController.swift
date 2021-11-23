@@ -26,7 +26,7 @@ class MainNavigationController: BaseNavigationController {
     
     
     func goToHomeController() {
-        pushViewController(homeController, animated: true)
+        viewControllers = [homeController]
     }
     
     

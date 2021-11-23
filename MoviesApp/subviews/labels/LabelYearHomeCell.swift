@@ -12,8 +12,7 @@ import Foundation
 class LabelYearHomeCell: BaseLabel {
     
     override func configure() {
-        textColor = .gray
-        set(fontSize: 14, isBold: false)
-        numberOfLines = 5
+        textColor = .lightGray
+        set(fontSize: 10, isBold: false)
     }
 }

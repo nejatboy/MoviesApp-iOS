@@ -10,6 +10,10 @@ import UIKit
 
 class BaseController<NC: BaseNavigationController>: UIViewController {
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     func navigationController() -> NC {
         return navigationController as! NC

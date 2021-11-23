@@ -1,15 +1,16 @@
 //
-//  HomeCell.swift
+//  HomeCell2.swift
 //  MoviesApp
 //
-//  Created by Nejat BOY on 21.11.2021.
+//  Created by Nejat BOY on 23.11.2021.
 //
 
-import UIKit
 import Kingfisher
+import UIKit
 
 
-class HomeCell: BaseTableViewCell {
+
+class HomeCell: BaseCollectionViewCell {
     
     private let imageViewPoster = ImageViewPoster()
     private let labelTitle = LabelTitleHomeCell()
@@ -31,22 +32,20 @@ class HomeCell: BaseTableViewCell {
     
     
     private func setConstraints() {
-        let spacing = Device.width * 0.02
+        let spacing = Device.height * 0.01
         
         NSLayoutConstraint.activate([
-            imageViewPoster.topAnchor.constraint(equalTo: topAnchor, constant: spacing),
-            imageViewPoster.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.5),
+            imageViewPoster.topAnchor.constraint(equalTo: topAnchor),
             imageViewPoster.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageViewPoster.heightAnchor.constraint(equalTo: imageViewPoster.widthAnchor, multiplier: 1.53),        //Image dimension ratio!
-                
+            imageViewPoster.widthAnchor.constraint(equalTo: widthAnchor),
+            imageViewPoster.heightAnchor.constraint(equalTo: imageViewPoster.widthAnchor, multiplier: 1.53),
+            
             labelTitle.centerXAnchor.constraint(equalTo: centerXAnchor),
-            labelTitle.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95),
             labelTitle.topAnchor.constraint(equalTo: imageViewPoster.bottomAnchor, constant: spacing),
+            labelTitle.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.95),
             
             labelYear.centerXAnchor.constraint(equalTo: centerXAnchor),
-            labelYear.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: spacing),
-        
-            bottomAnchor.constraint(equalTo: labelYear.bottomAnchor, constant: spacing),
+            labelYear.topAnchor.constraint(equalTo: labelTitle.bottomAnchor, constant: spacing)
         ])
     }
     

@@ -15,6 +15,7 @@ class BaseLabel: UILabel {
         
         translatesAutoresizingMaskIntoConstraints = false
         numberOfLines = 0
+        textAlignment = .center
         
         configure()
     }

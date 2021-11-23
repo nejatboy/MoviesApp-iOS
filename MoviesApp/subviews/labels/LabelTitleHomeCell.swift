@@ -12,8 +12,8 @@ class LabelTitleHomeCell: BaseLabel {
     
     
     override func configure() {
-        textColor = .black
-        set(fontSize: 17, isBold: true)
-        textAlignment = .center
+        textColor = .white
+        set(fontSize: 14, isBold: false)
+        numberOfLines = 2
     }
 }
