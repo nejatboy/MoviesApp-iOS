@@ -11,6 +11,13 @@
 		D91D368A2748111B0029E49A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D36892748111B0029E49A /* AppDelegate.swift */; };
 		D91D36932748111C0029E49A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D91D36922748111C0029E49A /* Assets.xcassets */; };
 		D91D36962748111C0029E49A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D91D36942748111C0029E49A /* LaunchScreen.storyboard */; };
+		D91D9A6B274E9DC20015CA81 /* BaseScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A6A274E9DC20015CA81 /* BaseScrollView.swift */; };
+		D91D9A6D274E9EC60015CA81 /* VerticalScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A6C274E9EC60015CA81 /* VerticalScrollView.swift */; };
+		D91D9A6F274EA6220015CA81 /* BaseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A6E274EA6220015CA81 /* BaseCardView.swift */; };
+		D91D9A71274EA75B0015CA81 /* GenreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A70274EA75B0015CA81 /* GenreView.swift */; };
+		D91D9A73274EA9590015CA81 /* LabelDescriptionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A72274EA9590015CA81 /* LabelDescriptionDetail.swift */; };
+		D91D9A75274EB2210015CA81 /* LabelNoResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A74274EB2210015CA81 /* LabelNoResult.swift */; };
+		D91D9A77274EC1C80015CA81 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91D9A76274EC1C80015CA81 /* MessageView.swift */; };
 		D92C252A274937A8002C84A8 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2529274937A8002C84A8 /* FirebaseService.swift */; };
 		D92C252C27493A9A002C84A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D92C252B27493A9A002C84A8 /* GoogleService-Info.plist */; };
 		D92C253227493D48002C84A8 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C253127493D48002C84A8 /* MessageType.swift */; };
@@ -22,8 +29,8 @@
 		D92C254E2749A1EA002C84A8 /* BaseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C254D2749A1EA002C84A8 /* BaseImageView.swift */; };
 		D92C25502749A235002C84A8 /* ImageViewPoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C254F2749A235002C84A8 /* ImageViewPoster.swift */; };
 		D92C2558274A696D002C84A8 /* LabelTitleHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2557274A696D002C84A8 /* LabelTitleHomeCell.swift */; };
-		D92C255A274A6B10002C84A8 /* LabelRunTimeHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2559274A6B10002C84A8 /* LabelRunTimeHomeCell.swift */; };
-		D92C255C274A6CE4002C84A8 /* LabelRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C255B274A6CE4002C84A8 /* LabelRating.swift */; };
+		D92C255A274A6B10002C84A8 /* LabelTitleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2559274A6B10002C84A8 /* LabelTitleDetail.swift */; };
+		D92C255C274A6CE4002C84A8 /* LabelCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C255B274A6CE4002C84A8 /* LabelCardView.swift */; };
 		D92C255F274A6DB6002C84A8 /* ImageViewStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C255E274A6DB6002C84A8 /* ImageViewStar.swift */; };
 		D92C2561274A6E1B002C84A8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2560274A6E1B002C84A8 /* RatingView.swift */; };
 		D92C2563274A6E37002C84A8 /* BaseSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C2562274A6E37002C84A8 /* BaseSimpleView.swift */; };
@@ -67,6 +74,13 @@
 		D91D36922748111C0029E49A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D91D36952748111C0029E49A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D91D36972748111C0029E49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D91D9A6A274E9DC20015CA81 /* BaseScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseScrollView.swift; sourceTree = "<group>"; };
+		D91D9A6C274E9EC60015CA81 /* VerticalScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalScrollView.swift; sourceTree = "<group>"; };
+		D91D9A6E274EA6220015CA81 /* BaseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCardView.swift; sourceTree = "<group>"; };
+		D91D9A70274EA75B0015CA81 /* GenreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenreView.swift; sourceTree = "<group>"; };
+		D91D9A72274EA9590015CA81 /* LabelDescriptionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelDescriptionDetail.swift; sourceTree = "<group>"; };
+		D91D9A74274EB2210015CA81 /* LabelNoResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelNoResult.swift; sourceTree = "<group>"; };
+		D91D9A76274EC1C80015CA81 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		D92C2529274937A8002C84A8 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		D92C252B27493A9A002C84A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D92C253127493D48002C84A8 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
@@ -78,8 +92,8 @@
 		D92C254D2749A1EA002C84A8 /* BaseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseImageView.swift; sourceTree = "<group>"; };
 		D92C254F2749A235002C84A8 /* ImageViewPoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewPoster.swift; sourceTree = "<group>"; };
 		D92C2557274A696D002C84A8 /* LabelTitleHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTitleHomeCell.swift; sourceTree = "<group>"; };
-		D92C2559274A6B10002C84A8 /* LabelRunTimeHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelRunTimeHomeCell.swift; sourceTree = "<group>"; };
-		D92C255B274A6CE4002C84A8 /* LabelRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelRating.swift; sourceTree = "<group>"; };
+		D92C2559274A6B10002C84A8 /* LabelTitleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelTitleDetail.swift; sourceTree = "<group>"; };
+		D92C255B274A6CE4002C84A8 /* LabelCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCardView.swift; sourceTree = "<group>"; };
 		D92C255E274A6DB6002C84A8 /* ImageViewStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewStar.swift; sourceTree = "<group>"; };
 		D92C2560274A6E1B002C84A8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		D92C2562274A6E37002C84A8 /* BaseSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSimpleView.swift; sourceTree = "<group>"; };
@@ -216,6 +230,7 @@
 				D92C254327499822002C84A8 /* BaseSearchBar.swift */,
 				D92C254D2749A1EA002C84A8 /* BaseImageView.swift */,
 				D92C2562274A6E37002C84A8 /* BaseSimpleView.swift */,
+				D91D9A6A274E9DC20015CA81 /* BaseScrollView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -227,6 +242,9 @@
 				D92C253B27498CCA002C84A8 /* labels */,
 				D92C25452749991F002C84A8 /* SearchBar.swift */,
 				D92C2560274A6E1B002C84A8 /* RatingView.swift */,
+				D91D9A6C274E9EC60015CA81 /* VerticalScrollView.swift */,
+				D91D9A70274EA75B0015CA81 /* GenreView.swift */,
+				D91D9A76274EC1C80015CA81 /* MessageView.swift */,
 			);
 			path = subviews;
 			sourceTree = "<group>";
@@ -236,9 +254,11 @@
 			children = (
 				D92C253C27498CD8002C84A8 /* LabelIntroSplash.swift */,
 				D92C2557274A696D002C84A8 /* LabelTitleHomeCell.swift */,
-				D92C2559274A6B10002C84A8 /* LabelRunTimeHomeCell.swift */,
-				D92C255B274A6CE4002C84A8 /* LabelRating.swift */,
+				D92C2559274A6B10002C84A8 /* LabelTitleDetail.swift */,
+				D92C255B274A6CE4002C84A8 /* LabelCardView.swift */,
 				D92C2564274A7224002C84A8 /* LabelYearHomeCell.swift */,
+				D91D9A72274EA9590015CA81 /* LabelDescriptionDetail.swift */,
+				D91D9A74274EB2210015CA81 /* LabelNoResult.swift */,
 			);
 			path = labels;
 			sourceTree = "<group>";
@@ -268,6 +288,7 @@
 			children = (
 				D9D2D92E27481B9F00ED2094 /* BaseControllerLayout.swift */,
 				D9591ED22748519600503378 /* BaseLayout.swift */,
+				D91D9A6E274EA6220015CA81 /* BaseCardView.swift */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -459,6 +480,7 @@
 				D92C2565274A7224002C84A8 /* LabelYearHomeCell.swift in Sources */,
 				D9591EC927484ECE00503378 /* BaseTableViewCell.swift in Sources */,
 				D92C254E2749A1EA002C84A8 /* BaseImageView.swift in Sources */,
+				D91D9A71274EA75B0015CA81 /* GenreView.swift in Sources */,
 				D9D2D93A27481D9100ED2094 /* SplashLayout.swift in Sources */,
 				D9D2D92A2748157400ED2094 /* Extensions.swift in Sources */,
 				D9D2D93127481C6A00ED2094 /* MainNavigationController.swift in Sources */,
@@ -468,13 +490,16 @@
 				D92C255F274A6DB6002C84A8 /* ImageViewStar.swift in Sources */,
 				D92C25502749A235002C84A8 /* ImageViewPoster.swift in Sources */,
 				D9591EC727484E9900503378 /* BaseTableView.swift in Sources */,
+				D91D9A6F274EA6220015CA81 /* BaseCardView.swift in Sources */,
 				D91D368A2748111B0029E49A /* AppDelegate.swift in Sources */,
-				D92C255A274A6B10002C84A8 /* LabelRunTimeHomeCell.swift in Sources */,
+				D91D9A6D274E9EC60015CA81 /* VerticalScrollView.swift in Sources */,
+				D92C255A274A6B10002C84A8 /* LabelTitleDetail.swift in Sources */,
 				D9F5C3EE274ACA0F00687025 /* Info.swift in Sources */,
 				D9D2D93827481D7F00ED2094 /* SplashController.swift in Sources */,
 				D9D2D940274822B200ED2094 /* DetailLayout.swift in Sources */,
 				D9D2D92C274815AE00ED2094 /* Device.swift in Sources */,
 				D9591ED32748519600503378 /* BaseLayout.swift in Sources */,
+				D91D9A73274EA9590015CA81 /* LabelDescriptionDetail.swift in Sources */,
 				D9D2D93E2748227B00ED2094 /* HomeLayout.swift in Sources */,
 				D9D2D9272748152B00ED2094 /* BaseController.swift in Sources */,
 				D989B088274D3F7C001B8CFA /* BaseCollectionViewCell.swift in Sources */,
@@ -482,7 +507,7 @@
 				D9D2D93C2748225400ED2094 /* HomeController.swift in Sources */,
 				D92C25462749991F002C84A8 /* SearchBar.swift in Sources */,
 				D92C2563274A6E37002C84A8 /* BaseSimpleView.swift in Sources */,
-				D92C255C274A6CE4002C84A8 /* LabelRating.swift in Sources */,
+				D92C255C274A6CE4002C84A8 /* LabelCardView.swift in Sources */,
 				D9D2D92F27481B9F00ED2094 /* BaseControllerLayout.swift in Sources */,
 				D92C2558274A696D002C84A8 /* LabelTitleHomeCell.swift in Sources */,
 				D989B08C274D4D1A001B8CFA /* HomeCell.swift in Sources */,
@@ -490,10 +515,13 @@
 				D9D2D93627481D0B00ED2094 /* DetailController.swift in Sources */,
 				D92C253627498ACA002C84A8 /* Text.swift in Sources */,
 				D989B08A274D4D00001B8CFA /* HomeCollectionView.swift in Sources */,
+				D91D9A77274EC1C80015CA81 /* MessageView.swift in Sources */,
+				D91D9A75274EB2210015CA81 /* LabelNoResult.swift in Sources */,
 				D9F5C3EC274AC9B500687025 /* MoviesResponseModel.swift in Sources */,
 				D9D2D9252748150800ED2094 /* BaseNavigationController.swift in Sources */,
 				D9F5C3F0274ACCFD00687025 /* Rating.swift in Sources */,
 				D92C253D27498CD8002C84A8 /* LabelIntroSplash.swift in Sources */,
+				D91D9A6B274E9DC20015CA81 /* BaseScrollView.swift in Sources */,
 				D92C2567274A8778002C84A8 /* ApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

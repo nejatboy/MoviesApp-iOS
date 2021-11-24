@@ -13,6 +13,7 @@ struct Text {
     struct Error {
         static let noConnection = "Please check internet connection."
         static let common = "An error occurred, please try again later."
+        static let updateApp = "There is a new update, please install it."
     }
     
 }

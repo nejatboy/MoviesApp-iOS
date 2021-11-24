@@ -9,10 +9,11 @@ import Foundation
 
 
 
-class LabelRunTimeHomeCell: BaseLabel {
+class LabelTitleDetail: BaseLabel {
     
     override func configure() {
-        textColor = .lightGray
-        set(fontSize: 12, isBold: false)
+        textColor = .white
+        set(fontSize: 18, isBold: true)
+        textAlignment = .left
     }
 }

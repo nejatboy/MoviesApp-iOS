@@ -47,10 +47,16 @@ class HomeCollectionView<C: HomeCell>: BaseCollectionView<C, HomeLayout>, UIColl
         
         if indexPath.row == movies.count - 1 {
             let page = movies.count / 10 + 1
-            parent().controller().request(page: page)
+            parent().controller().request(page: page, keyword: parent().controller().keyword)
         }
         
         return cell
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let movie = movies[indexPath.item]
+        parent().controller().onItemMovieClicked(movieID: movie.imdbID)
     }
     
     

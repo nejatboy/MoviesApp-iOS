@@ -21,7 +21,7 @@ class SplashController: BaseController<MainNavigationController> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firebaseService.fetchApplicationInfo(completion: infoFetched(_:))
+        firebaseService?.fetchApplicationInfo(completion: infoFetched(_:))
     }
     
     
@@ -31,20 +31,20 @@ class SplashController: BaseController<MainNavigationController> {
         guard let currentVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String else { return }
         
         if info.version > currentVersion {
-            // New Version
+            show(message: Text.Error.updateApp, type: .error)
             return
         }
         
-        firebaseService.fetchKeywords(completion: keywordsFetched(keywords:))
+        firebaseService?.fetchKeywords(completion: keywordsFetched(keywords:))
     }
     
     
     private func keywordsFetched(keywords: [String]) {
-        navigationController().keywords = keywords
-        navigationController().goToHomeController()
+        navigationController()?.keywords = keywords
+        navigationController()?.goToHomeController()
         
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-//            self.navigationController().goToHomeController()
-//        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.navigationController()?.goToHomeController()
+        }
     }
 }

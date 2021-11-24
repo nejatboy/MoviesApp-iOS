@@ -20,7 +20,6 @@ class ApiService: BaseApiService {
         call(request: request, type: MoviesResponseModel.self) { [self] responseModel in
             if let error = responseModel?.error {
                 messageListener?(error, .error)
-                return
             }
             
             let movies = responseModel?.movies ?? [Movie]()

@@ -5,7 +5,6 @@
 //  Created by Nejat BOY on 23.11.2021.
 //
 
-import Kingfisher
 import UIKit
 
 
@@ -53,6 +52,16 @@ class HomeCell: BaseCollectionViewCell {
     func bind(movie: Movie) {
         labelTitle.text = movie.title
         labelYear.text = movie.year
-        imageViewPoster.kf.setImage(with: URL(string: movie.poster))
+        imageViewPoster.loadFromUrl(url: movie.poster)
+    }
+    
+    
+    override var isHighlighted: Bool {
+        didSet {
+            superview?.superview?.endEditing(true)
+            UIView.animate(withDuration: 0.1) { [self] in
+                imageViewPoster.transform = isHighlighted ? CGAffineTransform(scaleX: 0.8, y: 0.8) : CGAffineTransform.identity
+            }
+        }
     }
 }

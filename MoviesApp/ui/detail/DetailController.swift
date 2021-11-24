@@ -18,9 +18,16 @@ class DetailController: BaseController<MainNavigationController> {
     }
     
     
-    func fetchMovieDetail(id: String) {
-        apiService.fetchMovieDetail(id: id) { movieDetail in
-            print("asd")
+    func bindMovieDetail(_ movieDetail: MovieDetailResponse, completion: @escaping () -> Void) {
+        DispatchQueue.main.async { [self] in
+            navigationItem.title = movieDetail.title
+            
+            layout.imageViewPoster.loadFromUrl(url: movieDetail.poster)
+            layout.genreView.set(genre: movieDetail.genre ?? "")
+            layout.labelTitle.text = movieDetail.title
+            layout.labelDescription.text = movieDetail.plot
+            
+            completion()
         }
     }
 }

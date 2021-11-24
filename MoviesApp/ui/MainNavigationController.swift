@@ -30,8 +30,9 @@ class MainNavigationController: BaseNavigationController {
     }
     
     
-    func goToDetailController(movieID: String) {
-        pushViewController(detailController, animated: true)
-        detailController.fetchMovieDetail(id: movieID)
+    func goToDetailController(movieDetail: MovieDetailResponse) {
+        detailController.bindMovieDetail(movieDetail) { [self] in
+            pushViewController(detailController, animated: true)
+        }
     }
 }

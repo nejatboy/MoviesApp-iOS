@@ -16,6 +16,8 @@ class BaseSimpleView: UIView {
         
         translatesAutoresizingMaskIntoConstraints = false
         
+        configure()
+        
         setupSubviews()
         
         setConstraints()
@@ -24,6 +26,11 @@ class BaseSimpleView: UIView {
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    
+    func configure() {
+        
     }
     
     

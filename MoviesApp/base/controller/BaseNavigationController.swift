@@ -38,6 +38,9 @@ class BaseNavigationController: UINavigationController {
     
     
     func show(message: String, type: MessageType) {
-        print(message)
+        DispatchQueue.main.async {
+            let messageView = MessageView()
+            messageView.show(parent: self.view, message: message)
+        }
     }
 }

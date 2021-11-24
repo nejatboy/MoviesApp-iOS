@@ -13,6 +13,8 @@ class BaseControllerLayout<NC: BaseNavigationController, C: BaseController<NC>>:
     init() {
         super.init(frame: Device.dimension)
         
+        backgroundColor = .black
+        
         setupSubviews()
         
         setConstraints()

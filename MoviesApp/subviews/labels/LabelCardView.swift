@@ -9,10 +9,10 @@ import Foundation
 
 
 
-class LabelRating: BaseLabel {
+class LabelCardView: BaseLabel {
     
     override func configure() {
         textColor = .lightGray
-        set(fontSize: 14, isBold: false)
+        set(fontSize: 16, isBold: false)
     }
 }
