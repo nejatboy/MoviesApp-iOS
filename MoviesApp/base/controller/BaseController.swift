@@ -40,4 +40,14 @@ class BaseController<NC: BaseNavigationController>: UIViewController {
     var apiService: ApiService? {
         return navigationController()?.apiService
     }
+    
+    
+    func showProgress() {
+        navigationController()?.showProgress()
+    }
+    
+    
+    func hideProgress() {
+        navigationController()?.hideProgress()
+    }
 }

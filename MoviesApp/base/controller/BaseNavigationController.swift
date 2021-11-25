@@ -12,10 +12,13 @@ class BaseNavigationController: UINavigationController {
     
     var firebaseService = FirebaseService()
     var apiService = ApiService()
+    private let progressView = ProgressView()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        view.addSubview(progressView)
         
         setupNavigationBar()
         
@@ -38,9 +41,22 @@ class BaseNavigationController: UINavigationController {
     
     
     func show(message: String, type: MessageType) {
+        hideProgress()
+        
         DispatchQueue.main.async {
             let messageView = MessageView()
             messageView.show(parent: self.view, message: message)
         }
+    }
+    
+    
+    func showProgress() {
+        progressView.show()
+    }
+    
+    
+    
+    func hideProgress() {
+        progressView.hide()
     }
 }

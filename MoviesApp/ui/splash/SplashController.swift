@@ -21,6 +21,7 @@ class SplashController: BaseController<MainNavigationController> {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        showProgress()
         firebaseService?.fetchApplicationInfo(completion: infoFetched(_:))
     }
     
@@ -40,8 +41,9 @@ class SplashController: BaseController<MainNavigationController> {
     
     
     private func keywordsFetched(keywords: [String]) {
+        hideProgress()
+        
         navigationController()?.keywords = keywords
-        navigationController()?.goToHomeController()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.navigationController()?.goToHomeController()

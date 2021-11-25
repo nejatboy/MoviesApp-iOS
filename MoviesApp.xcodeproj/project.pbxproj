@@ -46,6 +46,9 @@
 		D989B088274D3F7C001B8CFA /* BaseCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989B087274D3F7C001B8CFA /* BaseCollectionViewCell.swift */; };
 		D989B08A274D4D00001B8CFA /* HomeCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989B089274D4D00001B8CFA /* HomeCollectionView.swift */; };
 		D989B08C274D4D1A001B8CFA /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D989B08B274D4D1A001B8CFA /* HomeCell.swift */; };
+		D9B5E014274F776F00F30226 /* BaseInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5E013274F776F00F30226 /* BaseInfoView.swift */; };
+		D9B5E016274F778C00F30226 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5E015274F778C00F30226 /* ProgressView.swift */; };
+		D9B5E018274F77D200F30226 /* ImageViewProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B5E017274F77D200F30226 /* ImageViewProgress.swift */; };
 		D9D2D9252748150800ED2094 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2D9242748150800ED2094 /* BaseNavigationController.swift */; };
 		D9D2D9272748152B00ED2094 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2D9262748152B00ED2094 /* BaseController.swift */; };
 		D9D2D92A2748157400ED2094 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2D9292748157400ED2094 /* Extensions.swift */; };
@@ -109,6 +112,9 @@
 		D989B087274D3F7C001B8CFA /* BaseCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionViewCell.swift; sourceTree = "<group>"; };
 		D989B089274D4D00001B8CFA /* HomeCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionView.swift; sourceTree = "<group>"; };
 		D989B08B274D4D1A001B8CFA /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		D9B5E013274F776F00F30226 /* BaseInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInfoView.swift; sourceTree = "<group>"; };
+		D9B5E015274F778C00F30226 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		D9B5E017274F77D200F30226 /* ImageViewProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewProgress.swift; sourceTree = "<group>"; };
 		D9D2D9242748150800ED2094 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		D9D2D9262748152B00ED2094 /* BaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		D9D2D9292748157400ED2094 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -231,6 +237,7 @@
 				D92C254D2749A1EA002C84A8 /* BaseImageView.swift */,
 				D92C2562274A6E37002C84A8 /* BaseSimpleView.swift */,
 				D91D9A6A274E9DC20015CA81 /* BaseScrollView.swift */,
+				D9B5E013274F776F00F30226 /* BaseInfoView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -245,6 +252,7 @@
 				D91D9A6C274E9EC60015CA81 /* VerticalScrollView.swift */,
 				D91D9A70274EA75B0015CA81 /* GenreView.swift */,
 				D91D9A76274EC1C80015CA81 /* MessageView.swift */,
+				D9B5E015274F778C00F30226 /* ProgressView.swift */,
 			);
 			path = subviews;
 			sourceTree = "<group>";
@@ -268,6 +276,7 @@
 			children = (
 				D92C254F2749A235002C84A8 /* ImageViewPoster.swift */,
 				D92C255E274A6DB6002C84A8 /* ImageViewStar.swift */,
+				D9B5E017274F77D200F30226 /* ImageViewProgress.swift */,
 			);
 			path = imageViews;
 			sourceTree = "<group>";
@@ -486,13 +495,16 @@
 				D9D2D93127481C6A00ED2094 /* MainNavigationController.swift in Sources */,
 				D989B086274D3F48001B8CFA /* BaseCollectionView.swift in Sources */,
 				D9F5C3EA274AC97C00687025 /* Movie.swift in Sources */,
+				D9B5E014274F776F00F30226 /* BaseInfoView.swift in Sources */,
 				D9591ECB27484F9E00503378 /* BaseTableViewHeader.swift in Sources */,
+				D9B5E016274F778C00F30226 /* ProgressView.swift in Sources */,
 				D92C255F274A6DB6002C84A8 /* ImageViewStar.swift in Sources */,
 				D92C25502749A235002C84A8 /* ImageViewPoster.swift in Sources */,
 				D9591EC727484E9900503378 /* BaseTableView.swift in Sources */,
 				D91D9A6F274EA6220015CA81 /* BaseCardView.swift in Sources */,
 				D91D368A2748111B0029E49A /* AppDelegate.swift in Sources */,
 				D91D9A6D274E9EC60015CA81 /* VerticalScrollView.swift in Sources */,
+				D9B5E018274F77D200F30226 /* ImageViewProgress.swift in Sources */,
 				D92C255A274A6B10002C84A8 /* LabelTitleDetail.swift in Sources */,
 				D9F5C3EE274ACA0F00687025 /* Info.swift in Sources */,
 				D9D2D93827481D7F00ED2094 /* SplashController.swift in Sources */,

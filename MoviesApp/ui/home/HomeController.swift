@@ -35,6 +35,8 @@ class HomeController: BaseController<MainNavigationController> {
     
     
     func request(page: Int, keyword: String) {
+        showProgress()
+        
         apiService?.search(keyword: keyword, page: page) { [self] in
             if keyword != self.keyword && $0.isEmpty {
                 layout.collectionView.isHidden = true
@@ -48,6 +50,7 @@ class HomeController: BaseController<MainNavigationController> {
             }
             
             self.keyword = keyword
+            hideProgress()
         }
     }
     
@@ -60,8 +63,11 @@ class HomeController: BaseController<MainNavigationController> {
     
     
     func onItemMovieClicked(movieID: String) {
+        showProgress()
+        
         apiService?.fetchMovieDetail(id: movieID) { [self] movieDetail in
             navigationController()?.goToDetailController(movieDetail: movieDetail)
+            hideProgress()
         }   
     }
     
