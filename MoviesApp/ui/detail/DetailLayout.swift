@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class DetailLayout: BaseControllerLayout<MainNavigationController, DetailController> {
+class DetailLayout: BaseControllerLayout<DetailController> {
     
     private let scrollView = VerticalScrollView()
     let imageViewPoster = ImageViewPoster()
@@ -27,13 +27,6 @@ class DetailLayout: BaseControllerLayout<MainNavigationController, DetailControl
         scrollView.addSubview(labelDescription)
         
         addSubview(scrollView)
-        
-        
-        
-        labelTitle.text = "alsş dksaşşdkl lksadşaşs"
-        labelDescription.text = "alsş dksaşşdkl lksadşaşs l akslşdlk alksdlşksdklsşaakşlskşdlkasdlşasldas alsşdl şsa dl adsklşkdsl şasaşdlk sad klşsad kşlasd klşasdlşkdalşsd kaskşlddaksldklşassadlk şds klşd salkşsd alkşdlskaşdsklşsdlkş dlasşks adklsa dklşsa dklşsklşasa kdlş sklşalşks "
-        ratingView.set(rating: "8.2")
-        genreView.set(genre: "Action, Drama")
     }
     
     
@@ -53,7 +46,6 @@ class DetailLayout: BaseControllerLayout<MainNavigationController, DetailControl
             
             genreView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: spacing),
             genreView.topAnchor.constraint(equalTo: imageViewPoster.bottomAnchor, constant: 2 * spacing),
-            // WItDH
             
             labelTitle.topAnchor.constraint(equalTo: genreView.bottomAnchor, constant: 2 * spacing),
             labelTitle.leadingAnchor.constraint(equalTo: genreView.leadingAnchor),

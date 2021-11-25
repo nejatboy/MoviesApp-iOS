@@ -8,7 +8,7 @@
 import UIKit
 
 
-class HomeLayout: BaseControllerLayout<MainNavigationController, HomeController> {
+class HomeLayout: BaseControllerLayout<HomeController> {
     
     let searchBar = SearchBar()
     let collectionView = HomeCollectionView()
