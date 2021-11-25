@@ -14,6 +14,8 @@ class BaseSearchBar<L: BaseLayout>: UISearchBar, UISearchBarDelegate {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
+        backgroundImage = UIImage()
+        
         translatesAutoresizingMaskIntoConstraints = false
         delegate = self
         
