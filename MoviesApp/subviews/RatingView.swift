@@ -37,7 +37,8 @@ class RatingView: BaseCardView {
     }
     
     
-    func set(rating: String) {
-        labelRating.text = "\(rating) / 10"
+    func set(rating: String?) {
+        let point = rating ?? "-"
+        labelRating.text = "\(point) / 10"
     }
 }

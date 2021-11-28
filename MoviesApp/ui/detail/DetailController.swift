@@ -26,6 +26,7 @@ class DetailController: BaseController<MainNavigationController> {
             layout.genreView.set(genre: movieDetail.genre ?? "")
             layout.labelTitle.text = movieDetail.title
             layout.labelDescription.text = movieDetail.plot
+            layout.ratingView.set(rating: movieDetail.imdbRating)
             
             completion()
         }
