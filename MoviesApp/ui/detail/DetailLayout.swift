@@ -8,8 +8,7 @@
 import UIKit
 
 
-
-class DetailLayout: BaseControllerLayout<DetailController> {
+class DetailLayout: BaseControllerLayout {
     
     private let scrollView = VerticalScrollView()
     let imageViewPoster = ImageViewPoster()

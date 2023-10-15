@@ -8,7 +8,12 @@
 import UIKit
 
 
-class BaseController<NC: BaseNavigationController>: UIViewController {
+class BaseController<NC: BaseNavigationController, L: BaseControllerLayout>: UIViewController {
+    
+    
+    override func loadView() {
+        view = L()
+    }
     
     
     override func viewDidLoad() {
@@ -17,37 +22,38 @@ class BaseController<NC: BaseNavigationController>: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
+    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
     
     
-    func navigationController() -> NC? {
-        return navigationController as? NC
+    var navController: NC? {
+        navigationController as? NC
     }
 
     
     func show(message: String, type: MessageType) {
-        navigationController()?.show(message: message, type: type)
-    }
-    
-    
-    var firebaseService: FirebaseService? {
-        return navigationController()?.firebaseService
+        navController?.show(message: message, type: type)
     }
     
     
     var apiService: ApiService? {
-        return navigationController()?.apiService
+        navController?.apiService
     }
     
     
     func showProgress() {
-        navigationController()?.showProgress()
+        navController?.showProgress()
     }
     
     
     func hideProgress() {
-        navigationController()?.hideProgress()
+        navController?.hideProgress()
+    }
+    
+    
+    var layout: L {
+        view as! L
     }
 }

@@ -9,17 +9,10 @@ import Foundation
 import UIKit
 
 
-
-class HomeCollectionView<C: HomeCell>: BaseCollectionView<C, HomeLayout>, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeCollectionView: BaseCollectionView<Movie, HomeCell> {
     
     
     private var movies = [Movie]()
-    
-    
-    override func configuration() {
-        delegate = self
-        dataSource = self
-    }
     
     
     override func setLayout() {
@@ -35,39 +28,36 @@ class HomeCollectionView<C: HomeCell>: BaseCollectionView<C, HomeLayout>, UIColl
     }
     
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return movies.count
-    }
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return movies.count
+//    }
+//
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = dequeueReusableCell(withReuseIdentifier: C.id, for: indexPath) as! C
+//        let movie = movies[indexPath.item]
+//        cell.bind(movie: movie)
+//
+//        if indexPath.row == movies.count - 1 {
+//            let page = movies.count / 10 + 1
+//            parent().controller().request(page: page, keyword: parent().controller().keyword)
+//        }
+//
+//        return cell
+//    }
     
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: C.id, for: indexPath) as! C
-        let movie = movies[indexPath.item]
-        cell.bind(movie: movie)
-        
-        if indexPath.row == movies.count - 1 {
-            let page = movies.count / 10 + 1
-            parent().controller().request(page: page, keyword: parent().controller().keyword)
-        }
-        
-        return cell
-    }
     
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let movie = movies[indexPath.item]
-        parent().controller().onItemMovieClicked(movieID: movie.imdbID)
-    }
     
-    
-    func addMovies(_ movies: [Movie]) {
-        self.movies.append(contentsOf: movies)
-        reloadData()
-    }
-    
-    
-    func clear() {
-        movies.removeAll()
-        reloadData()
-    }
+//    func addMovies(_ movies: [Movie]) {
+//        self.movies.append(contentsOf: movies)
+//        reloadData()
+//    }
+//
+//
+//    func clear() {
+//        movies.removeAll()
+//        reloadData()
+//    }
 }

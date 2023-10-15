@@ -5,30 +5,23 @@
 //  Created by Nejat BOY on 19.11.2021.
 //
 
-import Foundation
 
-
-class DetailController: BaseController<MainNavigationController> {
+class DetailController: BaseController<MainNavigationController, DetailLayout> {
     
-    private let layout = DetailLayout()
-    
-    
-    override func loadView() {
-        view = layout
-    }
+    var movieDetail: MovieDetailResponse?
     
     
-    func bindMovieDetail(_ movieDetail: MovieDetailResponse, completion: @escaping () -> Void) {
-        DispatchQueue.main.async { [self] in
-            navigationItem.title = movieDetail.title
-            
-            layout.imageViewPoster.loadFromUrl(url: movieDetail.poster)
-            layout.genreView.set(genre: movieDetail.genre ?? "")
-            layout.labelTitle.text = movieDetail.title
-            layout.labelDescription.text = movieDetail.plot
-            layout.ratingView.set(rating: movieDetail.imdbRating)
-            
-            completion()
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        guard let movieDetail = movieDetail else { return }
+        
+        navigationItem.title = movieDetail.title
+        
+        layout.imageViewPoster.loadFromUrl(url: movieDetail.poster)
+        layout.genreView.set(genre: movieDetail.genre ?? "")
+        layout.labelTitle.text = movieDetail.title
+        layout.labelDescription.text = movieDetail.plot
+        layout.ratingView.set(rating: movieDetail.imdbRating)
     }
 }

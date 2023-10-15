@@ -8,9 +8,10 @@
 import UIKit
 
 
-class BaseControllerLayout<C: UIViewController>: BaseLayout {
+class BaseControllerLayout: UIView {
     
-    init() {
+    
+    required init() {
         super.init(frame: Device.dimension)
         
         backgroundColor = .black
@@ -28,11 +29,6 @@ class BaseControllerLayout<C: UIViewController>: BaseLayout {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         endEditing(true)
-    }
-    
-    
-    func controller() -> C {
-        return next as! C
     }
     
     

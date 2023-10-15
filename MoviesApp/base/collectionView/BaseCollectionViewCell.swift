@@ -9,9 +9,7 @@
 import UIKit
 
 
-class BaseCollectionViewCell: UICollectionViewCell {
-    
-    static let id = UUID().uuidString
+class BaseCollectionViewCell<ITEM>: UICollectionViewCell {
     
     
     override init(frame: CGRect) {
@@ -26,7 +24,8 @@ class BaseCollectionViewCell: UICollectionViewCell {
     }
     
     
-    func configure() {
-        
-    }
+    func configure() {}
+    
+    
+    func bindItem(item: ITEM) {}
 }

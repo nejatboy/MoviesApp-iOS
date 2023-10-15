@@ -8,31 +8,32 @@
 import Foundation
 
 
-
 class MainNavigationController: BaseNavigationController {
     
-    private let splashController = SplashController()
-    private lazy var homeController = HomeController()
-    private lazy var detailController = DetailController()
-    
-    var keywords = [String]()
+    var keywords = ["fear", "love", "dark", "award", "sword", "kight", "power", "want", "hell", "captain"]
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewControllers = [splashController]
+        viewControllers = [SplashController()]
     }
     
     
     func goToHomeController() {
-        viewControllers = [homeController]
+        let homeController = HomeController()
+        pushViewController(homeController, animated: true)
+        
+        viewControllers.removeAll {
+            $0 is SplashController
+        }
     }
     
     
     func goToDetailController(movieDetail: MovieDetailResponse) {
-        detailController.bindMovieDetail(movieDetail) { [self] in
-            pushViewController(detailController, animated: true)
-        }
+        let detailController = DetailController()
+        detailController.movieDetail = movieDetail
+        
+        pushViewController(detailController, animated: true)
     }
 }

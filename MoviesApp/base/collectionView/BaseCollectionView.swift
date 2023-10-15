@@ -9,13 +9,22 @@
 import UIKit
 
 
-class BaseCollectionView<C: BaseCollectionViewCell, L: BaseLayout>: UICollectionView {
+class BaseCollectionView<ITEM, C: BaseCollectionViewCell<ITEM>>: UICollectionView, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    private let cellId = UUID().uuidString
+    private var items: [ITEM] = []
+    var onItemClicked: ((ITEM) -> Void)?
+    var lastItemScrolled: ((Int) -> Void)?
+    
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: .init())
         
         translatesAutoresizingMaskIntoConstraints = false
-        register(C.self, forCellWithReuseIdentifier: C.id)
+        register(C.self, forCellWithReuseIdentifier: cellId)
+        
+        delegate = self
+        dataSource = self
         
         configuration()
         setLayout()
@@ -27,18 +36,47 @@ class BaseCollectionView<C: BaseCollectionViewCell, L: BaseLayout>: UICollection
     }
     
     
-    func configuration() {
+    func configuration() {}
+    
+    
+    func setLayout() {}
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        items.count
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as? C else { return .init() }
         
-    }
-    
-    
-    func setLayout() {
+        let item = items[indexPath.item]
+        cell.bindItem(item: item)
         
+        if indexPath.item == items.count - 1 {
+            lastItemScrolled?(items.count)
+        }
+        
+        return cell
     }
     
     
-    func parent() -> L {
-        return superview as! L
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let onItemClicked = onItemClicked else { return }
+        
+        let movie = items[indexPath.item]
+        onItemClicked(movie)
     }
     
+    
+    func addItems(_ items: [ITEM]) {
+        self.items.append(contentsOf: items)
+        reloadData()
+    }
+    
+    
+    func clear() {
+        items.removeAll()
+        reloadData()
+    }
 }

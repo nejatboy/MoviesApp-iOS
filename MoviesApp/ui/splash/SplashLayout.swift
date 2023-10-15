@@ -8,7 +8,7 @@
 import UIKit
 
 
-class SplashLayout: BaseControllerLayout<SplashController> {
+class SplashLayout: BaseControllerLayout {
     
     let labelIntro = LabelIntroSplash()
     

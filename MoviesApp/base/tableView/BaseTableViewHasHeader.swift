@@ -8,7 +8,7 @@
 import Foundation
 
 
-class BaseTableViewHasHeader<C: BaseTableViewCell, L: BaseLayout, H: BaseTableViewHeader>: BaseTableView<C, L> {
+class BaseTableViewHasHeader<C: BaseTableViewCell, H: BaseTableViewHeader>: BaseTableView<C> {
     
     
     override func configuration() {

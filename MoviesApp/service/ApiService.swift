@@ -11,6 +11,7 @@ import Foundation
 
 class ApiService: BaseApiService {
     
+    
     func search(keyword: String, page: Int, completion: @escaping ([Movie]) -> Void) {
         let url = URL(string: baseUrl + "/?s=\(keyword)&page=\(page)&apikey=\(apiKey)")!
         
@@ -19,7 +20,7 @@ class ApiService: BaseApiService {
         
         call(request: request, type: MoviesResponseModel.self) { [self] responseModel in
             if let error = responseModel?.error {
-                messageListener?(error, .error)
+//                messageListener?(error, .error)
             }
             
             let movies = responseModel?.movies ?? [Movie]()

@@ -8,7 +8,9 @@
 import UIKit
 
 
-class BaseSearchBar<L: BaseLayout>: UISearchBar, UISearchBarDelegate {
+class BaseSearchBar: UISearchBar, UISearchBarDelegate {
+    
+    var searched: ((String) -> Void)?
     
     
     override init(frame: CGRect) {
@@ -28,17 +30,8 @@ class BaseSearchBar<L: BaseLayout>: UISearchBar, UISearchBarDelegate {
     }
     
     
-    func configure() {
-        
-    }
+    func configure() {}
     
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-    }
-    
-    
-    func parent() -> L {
-        return superview as! L
-    }
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {}
 }

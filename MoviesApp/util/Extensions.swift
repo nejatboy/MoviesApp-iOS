@@ -24,16 +24,6 @@ extension InlineConfigurable {
 }
 
 
-// MARK: - ASYNC
-extension InlineConfigurable{
-    func async(_ block: @escaping () -> Void) {
-        DispatchQueue.main.async {
-            block()
-        }
-    }
-}
-
-
 // MARK: - UIFONT
 extension UIFont {
     static func getDynamic(of size: CGFloat, isBold: Bool) -> Self {

@@ -8,29 +8,30 @@
 import UIKit
 
 
-
-class HomeController: BaseController<MainNavigationController> {
+class HomeController: BaseController<MainNavigationController, HomeLayout> {
     
-    private let layout = HomeLayout()
-    var keyword: String!
+    var keyword: String?
     
     
     override func loadView() {
-        view = layout
+        super.loadView()
         
-        navigationController()?.isNavigationBarHidden = false
-        navigationItem.title = "Movies App"
+        layout.collectionView.onItemClicked = onItemMovieClicked
+        layout.collectionView.lastItemScrolled = lastMovieScrolled
+        layout.searchBar.searched = searched
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Movies App"
+        navigationController?.isNavigationBarHidden = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(buttonSearchClicked))
         
-        keyword = navigationController()?.keywords.randomElement()!
-        
-        request(page: 1, keyword: keyword)
+        if let randomKeyword = navController?.keywords.randomElement() {
+            request(page: 1, keyword: randomKeyword)
+        }
     }
     
     
@@ -40,13 +41,10 @@ class HomeController: BaseController<MainNavigationController> {
         apiService?.search(keyword: keyword, page: page) { [self] in
             if keyword != self.keyword && $0.isEmpty {
                 layout.collectionView.isHidden = true
-                layout.labelNoResult.isHidden = false
-            }
-            
-            else {
+                
+            } else {
                 layout.collectionView.isHidden = false
-                layout.labelNoResult.isHidden = true
-                layout.collectionView.addMovies($0)
+                layout.collectionView.addItems($0)
             }
             
             self.keyword = keyword
@@ -62,11 +60,11 @@ class HomeController: BaseController<MainNavigationController> {
     }
     
     
-    func onItemMovieClicked(movieID: String) {
+    private func onItemMovieClicked(movie: Movie) {
         showProgress()
         
-        apiService?.fetchMovieDetail(id: movieID) { [self] movieDetail in
-            navigationController()?.goToDetailController(movieDetail: movieDetail)
+        apiService?.fetchMovieDetail(id: movie.imdbID) { [self] movieDetail in
+            navController?.goToDetailController(movieDetail: movieDetail)
             hideProgress()
         }   
     }
@@ -75,5 +73,14 @@ class HomeController: BaseController<MainNavigationController> {
     @objc private func buttonSearchClicked() {
         navigationItem.rightBarButtonItem = nil
         layout.searchBar.show()
+    }
+    
+    
+    private func lastMovieScrolled(numberOfMovies: Int) {
+        let numberOfMoviesOnAPage = 10
+        let pageNumber = numberOfMovies / numberOfMoviesOnAPage + 1
+        
+        guard let keyword = keyword else { return }
+        request(page: pageNumber, keyword: keyword)
     }
 }

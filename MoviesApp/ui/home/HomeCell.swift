@@ -9,7 +9,7 @@ import UIKit
 
 
 
-class HomeCell: BaseCollectionViewCell {
+class HomeCell: BaseCollectionViewCell<Movie> {
     
     private let imageViewPoster = ImageViewPoster()
     private let labelTitle = LabelTitleHomeCell()
@@ -49,10 +49,10 @@ class HomeCell: BaseCollectionViewCell {
     }
     
     
-    func bind(movie: Movie) {
-        labelTitle.text = movie.title
-        labelYear.text = movie.year
-        imageViewPoster.loadFromUrl(url: movie.poster)
+    override func bindItem(item: Movie) {
+        labelTitle.text = item.title
+        labelYear.text = item.year
+        imageViewPoster.loadFromUrl(url: item.poster)
     }
     
     

@@ -8,14 +8,14 @@
 import UIKit
 
 
-class SearchBar: BaseSearchBar<HomeLayout> {
+class SearchBar: BaseSearchBar {
     
     var heightConstraint = NSLayoutConstraint()
+    
     
     override func configure() {
         layer.borderWidth = 1
         layer.borderColor = UIColor.black.cgColor
-        
         
         heightConstraint = heightAnchor.constraint(equalToConstant: 0)
         heightConstraint.isActive = true
@@ -33,7 +33,7 @@ class SearchBar: BaseSearchBar<HomeLayout> {
                 .replacingOccurrences(of: "ğ", with: "g")
         else { return }
         
-        parent().controller().searched(text: text)
+        searched?(text)
         self.text = nil
     }
     
@@ -41,7 +41,7 @@ class SearchBar: BaseSearchBar<HomeLayout> {
     func show() {
         UIView.animate(withDuration: 0.3) { [self] in
             heightConstraint.constant = 50
-            parent().layoutIfNeeded()
+            superview?.layoutIfNeeded()
         }
     }
 }

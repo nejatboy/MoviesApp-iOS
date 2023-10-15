@@ -51,10 +51,8 @@ class ProgressView: BaseInfoView {
     
     
     func hide() {
-        async { [self] in
-            isHidden = true
-            imageView.stopAnimating()
-        }
+        isHidden = true
+        imageView.stopAnimating()
     }
 }
 

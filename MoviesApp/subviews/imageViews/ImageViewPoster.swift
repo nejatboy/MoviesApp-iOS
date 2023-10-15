@@ -5,8 +5,7 @@
 //  Created by Nejat BOY on 21.11.2021.
 //
 
-import Kingfisher
-import UIKit
+import SDWebImage
 
 
 class ImageViewPoster: BaseImageView {
@@ -18,6 +17,10 @@ class ImageViewPoster: BaseImageView {
     
     
     func loadFromUrl(url: String?) {
-        kf.setImage(with: URL(string: url ?? ""))
+        guard let url = url else { return }
+        
+        sd_setImage(
+            with: URL(string: url)
+        )
     }
 }

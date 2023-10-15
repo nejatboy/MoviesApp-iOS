@@ -10,7 +10,7 @@ import UIKit
 
 
 
-class BaseTableView<C: BaseTableViewCell, L: BaseLayout>: UITableView {
+class BaseTableView<C: BaseTableViewCell>: UITableView {
     
     
     override init(frame: CGRect, style: UITableView.Style) {
@@ -31,10 +31,5 @@ class BaseTableView<C: BaseTableViewCell, L: BaseLayout>: UITableView {
     
     func configuration() {
         
-    }
-    
-    
-    func parent() -> L {
-        return superview as! L
     }
 }

@@ -25,7 +25,5 @@ class BaseImageView: UIImageView {
     }
     
     
-    func configure() {
-        
-    }
+    func configure() {}
 }

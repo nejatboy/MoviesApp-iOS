@@ -10,6 +10,7 @@ import UIKit
 
 class BaseLabel: UILabel {
     
+    
     init() {
         super.init(frame: .zero)
         

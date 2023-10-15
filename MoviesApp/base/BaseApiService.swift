@@ -22,20 +22,35 @@ class BaseApiService: NSObject {
             guard let data = data, let response = response as? HTTPURLResponse else {
                 print("# WebServiceError -> \(error?.localizedDescription ?? "Error")")
                 messageListener?(Text.Error.common, .error)
-                return async { completion(nil) }
+                
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+                
+                return
             }
             
             print(response)
 
             do {
                 let model = try JSONDecoder().decode(T.self, from: data)
-                return async { completion(model) }
+                
+                DispatchQueue.main.async {
+                    completion(model)
+                }
+                
+                return
             }
 
             catch let error {
                 print("# WebServiceError -> \(error.localizedDescription)")
                 messageListener?(Text.Error.common, .error)
-                return self.async { completion(nil) }
+                
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+                
+                return
             }
 
         }.resume()

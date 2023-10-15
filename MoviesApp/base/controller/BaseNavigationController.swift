@@ -10,7 +10,6 @@ import UIKit
 
 class BaseNavigationController: UINavigationController {
     
-    var firebaseService = FirebaseService()
     var apiService = ApiService()
     private let progressView = ProgressView()
     
@@ -22,7 +21,6 @@ class BaseNavigationController: UINavigationController {
         
         setupNavigationBar()
         
-        firebaseService.messageListener = show(message:type:)
         apiService.messageListener = show(message:type:)
     }
     

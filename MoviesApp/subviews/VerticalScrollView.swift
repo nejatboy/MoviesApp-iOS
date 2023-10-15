@@ -10,7 +10,8 @@ import UIKit
 
 class VerticalScrollView: BaseScrollView {
     
-    func fillTo(parent view: BaseLayout) {
+    
+    func fillTo(parent view: BaseControllerLayout) {
         NSLayoutConstraint.activate([
             leadingAnchor.constraint(equalTo: view.leadingAnchor),
             topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
@@ -18,5 +19,4 @@ class VerticalScrollView: BaseScrollView {
             trailingAnchor.constraint(equalTo: view.trailingAnchor)
         ])
     }
-    
 }
